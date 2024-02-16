@@ -1,10 +1,14 @@
 {
-  "name": "ui-components",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@mohammadshehadeh/ui-components",
+  "version": "0.0.4-beta",
   "type": "module",
+  "license": "MIT",
+  "repository": "https://github.com/MohammadShehadeh/ui-components.git",
+  "author": "Mohammad Shehadeh",
+  "bugs": {
+    "url": "https://github.com/MohammadShehadeh/ui-components/issues"
+  },
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
@@ -14,14 +18,25 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["dist/**/*", "README.md", "*.js", "*.d.ts"],
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
+  "keywords": [
+    "components",
+    "react"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build:tsc": "tsc",
     "build:vite": "vite build",
-    "build:storybook": "storybook build -o dist",
-    "build": "yarn build:tsc && yarn build:storybook",
-    "storybook": "storybook dev -p 6006",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "build:storybook": "storybook build",
+    "build": "yarn build:tsc && yarn build:vite",
+    "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
     "react": "^18.2.0",

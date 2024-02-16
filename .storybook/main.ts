@@ -18,13 +18,7 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   core: {
-    builder: {
-      name: "@storybook/builder-vite", // 👈 The builder enabled here.
-      // Override the default configuration
-      options: {
-        viteConfigPath: "./vite.config.ts",
-      },
-    },
+    builder: '@storybook/builder-vite',
   },
   typescript: {
     reactDocgen: "react-docgen", // 👈 react-docgen configured here.
@@ -48,4 +42,5 @@ const config: StorybookConfig = {
     });
   },
 };
+
 export default config;
